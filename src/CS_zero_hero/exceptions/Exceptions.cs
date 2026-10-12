@@ -1,10 +1,10 @@
-﻿// =====================================================================================================
+// =====================================================================================================
 // 10_EXCEPTIONS.cs
 // -----------------------------------------------------------------------------------------------------
 // PURPOSE:
 // Teach how to handle runtime errors (exceptions) gracefully in C#.
 //
-// Exceptions are unexpected events that disrupt program flow — such as missing files,
+// Exceptions are unexpected events that disrupt program flow - such as missing files,
 // invalid input, or division by zero. Instead of crashing, we can catch and handle them.
 // -----------------------------------------------------------------------------------------------------
 //
@@ -28,7 +28,7 @@ namespace CS_Zero_Hero.exceptions
             Console.WriteLine("=== EXCEPTIONS IN C# ===\n");
 
             // =================================================================================================
-            // 1️⃣ BASIC TRY / CATCH
+            // 1. BASIC TRY / CATCH
             // -------------------------------------------------------------------------------------------------
             // Handle code that *might* fail.
             // -------------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ namespace CS_Zero_Hero.exceptions
             }
 
             // =================================================================================================
-            // 2️⃣ MULTIPLE EXCEPTION TYPES
+            // 2. MULTIPLE EXCEPTION TYPES
             // -------------------------------------------------------------------------------------------------
             Console.WriteLine("\n-- Multiple Exception Types --");
             try
@@ -73,7 +73,7 @@ namespace CS_Zero_Hero.exceptions
             }
 
             // =================================================================================================
-            // 3️⃣ THROWING EXCEPTIONS
+            // 3. THROWING EXCEPTIONS
             // -------------------------------------------------------------------------------------------------
             // You can throw exceptions manually when business logic fails.
             // -------------------------------------------------------------------------------------------------
@@ -88,7 +88,7 @@ namespace CS_Zero_Hero.exceptions
             }
 
             // =================================================================================================
-            // 4️⃣ CUSTOM EXCEPTION CLASS
+            // 4. CUSTOM EXCEPTION CLASS
             // -------------------------------------------------------------------------------------------------
             try
             {
@@ -100,9 +100,9 @@ namespace CS_Zero_Hero.exceptions
             }
 
             // =================================================================================================
-            // 5️⃣ INNER EXCEPTIONS
+            // 5. INNER EXCEPTIONS
             // -------------------------------------------------------------------------------------------------
-            // Sometimes one exception leads to another — we can *wrap* it for context.
+            // Sometimes one exception leads to another - we can *wrap* it for context.
             // -------------------------------------------------------------------------------------------------
             try
             {
@@ -124,19 +124,19 @@ namespace CS_Zero_Hero.exceptions
             }
 
             // =================================================================================================
-            // 6️⃣ LBYL vs. EAFP — ERROR HANDLING PHILOSOPHIES
+            // 6. LBYL vs. EAFP - ERROR HANDLING PHILOSOPHIES
             // -------------------------------------------------------------------------------------------------
             // These are two common patterns for handling risky operations:
             //
-            //  LBYL — “Look Before You Leap”
+            //  LBYL - "Look Before You Leap"
             //          Check conditions before doing something.
-            //          ✅ Avoids exceptions
-            //          ❌ Race conditions if the state changes between check and action
+            //          [OK] Avoids exceptions
+            //          [X] Race conditions if the state changes between check and action
             //
-            //  EAFP — “Easier to Ask Forgiveness than Permission”
+            //  EAFP - "Easier to Ask Forgiveness than Permission"
             //          Try the operation and catch exceptions if they happen.
-            //          ✅ Cleaner, faster when errors are rare
-            //          ❌ Slightly slower if exceptions are frequent
+            //          [OK] Cleaner, faster when errors are rare
+            //          [X] Slightly slower if exceptions are frequent
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("\n-- LBYL Example (Check Before Accessing File) --");
@@ -151,7 +151,7 @@ namespace CS_Zero_Hero.exceptions
             }
             else
             {
-                Console.WriteLine("File does not exist — skipping read.");
+                Console.WriteLine("File does not exist - skipping read.");
             }
 
             Console.WriteLine("\n-- EAFP Example (Try It and Catch) --");
@@ -164,7 +164,7 @@ namespace CS_Zero_Hero.exceptions
             }
             catch (FileNotFoundException)
             {
-                Console.WriteLine("File not found — handled gracefully.");
+                Console.WriteLine("File not found - handled gracefully.");
             }
 
             // When to use which:
@@ -174,17 +174,17 @@ namespace CS_Zero_Hero.exceptions
             // =================================================================================================
             // SUMMARY
             // -------------------------------------------------------------------------------------------------
-            // ✅ try / catch → handle runtime errors gracefully
-            // ✅ finally → clean up resources
-            // ✅ throw → raise your own exceptions
-            // ✅ custom exceptions → add domain context
-            // ✅ LBYL vs. EAFP → two ways to manage risk
+            // - try / catch -> handle runtime errors gracefully
+            // - finally -> clean up resources
+            // - throw -> raise your own exceptions
+            // - custom exceptions -> add domain context
+            // - LBYL vs. EAFP -> two ways to manage risk
             // -------------------------------------------------------------------------------------------------
             Console.WriteLine("\n=== END OF 10_EXCEPTIONS MODULE ===");
         }
 
         // -------------------------------------------------------------------------------------------------
-        // SUPPORTING METHOD — Demonstrates throwing exceptions
+        // SUPPORTING METHOD - Demonstrates throwing exceptions
         // -------------------------------------------------------------------------------------------------
         static void ValidateAge(int age)
         {

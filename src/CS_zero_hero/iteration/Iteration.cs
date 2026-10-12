@@ -1,8 +1,8 @@
-﻿// =====================================================================================================
+// =====================================================================================================
 // 05_ITERATION.cs
 // -----------------------------------------------------------------------------------------------------
 // PURPOSE:
-// Introduce iteration — the process of repeating actions in sequence over data or time.
+// Introduce iteration - the process of repeating actions in sequence over data or time.
 //
 // Iteration is at the heart of programming. Whether counting numbers, processing data, or scanning
 // through items in a list, loops let your program perform repetitive work efficiently.
@@ -13,8 +13,8 @@
 // - Learn what "iteration" means and how it differs from "recursion"
 // - Understand how iterators work behind foreach (IEnumerator / IEnumerable)
 // - Explore basic array and list iteration patterns
-// - Learn why advanced iterators (like yield) exist — efficiency, readability, memory savings
-// - Compare with other languages’ iterator models (Java, Python, etc.)
+// - Learn why advanced iterators (like yield) exist - efficiency, readability, memory savings
+// - Compare with other languages' iterator models (Java, Python, etc.)
 // -----------------------------------------------------------------------------------------------------
 
 using System;
@@ -34,12 +34,12 @@ namespace CS_Zero_Hero.iteration
             // -------------------------------------------------------------------------------------------------
             // Iteration = repetition of steps until a condition is met.
             //
-            // It’s commonly achieved with loops:
+            // It's commonly achieved with loops:
             //   - for (known number of repeats)
             //   - while / do-while (unknown number, conditional)
             //   - foreach (iterate over a collection)
             //
-            // Iteration differs from recursion — iteration repeats code, recursion calls itself.
+            // Iteration differs from recursion - iteration repeats code, recursion calls itself.
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("-- Basic Counting Loop (for) --");
@@ -52,7 +52,7 @@ namespace CS_Zero_Hero.iteration
             // where you know the number of repetitions in advance.
 
             // =================================================================================================
-            // 2. FOREACH LOOP — ITERATING OVER SEQUENCES
+            // 2. FOREACH LOOP - ITERATING OVER SEQUENCES
             // -------------------------------------------------------------------------------------------------
             // foreach automatically retrieves each element in a collection that implements IEnumerable.
             // It hides index logic, making code cleaner and less error-prone.
@@ -67,7 +67,7 @@ namespace CS_Zero_Hero.iteration
                 Console.WriteLine($"Planet: {planet}");
             }
 
-            // Foreach uses an *enumerator* (like Java’s Iterator or Python’s iter()) under the hood.
+            // Foreach uses an *enumerator* (like Java's Iterator or Python's iter()) under the hood.
             // The compiler translates foreach into something like:
             //
             //    var enumerator = planets.GetEnumerator();
@@ -77,7 +77,7 @@ namespace CS_Zero_Hero.iteration
             //        Console.WriteLine(item);
             //    }
             //
-            // Benefit: You don’t need to track indexes or check boundaries manually.
+            // Benefit: You don't need to track indexes or check boundaries manually.
 
             // =================================================================================================
             // 3. EXPLICIT ITERATOR EXAMPLE (IEnumerable / IEnumerator)
@@ -102,10 +102,10 @@ namespace CS_Zero_Hero.iteration
             // - Common in custom collection classes or libraries that process large data sets
 
             // =================================================================================================
-            // 4. WHILE LOOP — CONDITION-BASED ITERATION
+            // 4. WHILE LOOP - CONDITION-BASED ITERATION
             // -------------------------------------------------------------------------------------------------
             // While loops repeat as long as a condition is true.
-            // Useful when the number of iterations isn’t known beforehand.
+            // Useful when the number of iterations isn't known beforehand.
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("\n-- While Example --");
@@ -121,7 +121,7 @@ namespace CS_Zero_Hero.iteration
             // - Offers more flexibility than for-loops in open-ended processes
 
             // =================================================================================================
-            // 5. DO-WHILE LOOP — RUNS AT LEAST ONCE
+            // 5. DO-WHILE LOOP - RUNS AT LEAST ONCE
             // -------------------------------------------------------------------------------------------------
             // The do-while loop executes first, then checks the condition.
             // -------------------------------------------------------------------------------------------------
@@ -141,7 +141,7 @@ namespace CS_Zero_Hero.iteration
             //   (e.g., prompting user input or reading initial sensor data)
 
             // =================================================================================================
-            // 6. LIST ITERATION — BASIC COLLECTION LOOP
+            // 6. LIST ITERATION - BASIC COLLECTION LOOP
             // -------------------------------------------------------------------------------------------------
             // Lists (dynamic arrays) can also be iterated over like arrays.
             // -------------------------------------------------------------------------------------------------
@@ -165,7 +165,7 @@ namespace CS_Zero_Hero.iteration
             // - Great for everyday data processing and iteration tasks
 
             // =================================================================================================
-            // 7. CUSTOM ITERATOR — USING yield return
+            // 7. CUSTOM ITERATOR - USING yield return
             // -------------------------------------------------------------------------------------------------
             // yield return allows you to define your own iterator logic.
             // Instead of returning all values at once, it "pauses" execution between results.
@@ -187,19 +187,19 @@ namespace CS_Zero_Hero.iteration
             // =================================================================================================
             // SUMMARY
             // -------------------------------------------------------------------------------------------------
-            // ✅ for        → fixed iteration count (best for numeric loops)
-            // ✅ while      → repeat until condition changes (open-ended)
-            // ✅ do-while   → runs at least once (input validation, initial setup)
-            // ✅ foreach    → iterate cleanly over collections
-            // ✅ IEnumerator → manual control for advanced iteration
-            // ✅ yield return → efficient, lazy iteration for large or streaming data
+            // - for        -> fixed iteration count (best for numeric loops)
+            // - while      -> repeat until condition changes (open-ended)
+            // - do-while   -> runs at least once (input validation, initial setup)
+            // - foreach    -> iterate cleanly over collections
+            // - IEnumerator -> manual control for advanced iteration
+            // - yield return -> efficient, lazy iteration for large or streaming data
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("\n=== END OF 05_ITERATION MODULE ===");
         }
 
         // -------------------------------------------------------------------------------------------------
-        // SUPPORTING METHOD — Custom iterator using yield
+        // SUPPORTING METHOD - Custom iterator using yield
         // -------------------------------------------------------------------------------------------------
         static IEnumerable<int> GetEvenNumbers(int max)
         {

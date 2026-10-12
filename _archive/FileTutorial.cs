@@ -1,4 +1,4 @@
-﻿// ==============================
+// ==============================
 // File: FileIO.cs
 // ==============================
 // This file demonstrates comprehensive File I/O in C# with detailed commentary.

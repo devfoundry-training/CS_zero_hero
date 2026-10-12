@@ -1,8 +1,8 @@
-﻿// =====================================================================================================
+// =====================================================================================================
 // 06_COLLECTIONS.cs
 // -----------------------------------------------------------------------------------------------------
 // PURPOSE:
-// Introduce C# collections — the classes and interfaces used to store and manage groups of data.
+// Introduce C# collections - the classes and interfaces used to store and manage groups of data.
 //
 // Collections provide dynamic storage for related items. Unlike arrays, they can resize automatically,
 // perform lookups efficiently, and provide specialized data-handling behavior.
@@ -39,7 +39,7 @@ namespace CS_Zero_Hero.collections
             Console.WriteLine($"Array length: {arrayFruits.Length}");
 
             // =================================================================================================
-            // 2. LIST<T> — RESIZABLE, INDEXED COLLECTION
+            // 2. LIST<T> - RESIZABLE, INDEXED COLLECTION
             // -------------------------------------------------------------------------------------------------
             // List<T> is the most commonly used collection.
             // It allows random access, insertion, and removal of elements.
@@ -68,7 +68,7 @@ namespace CS_Zero_Hero.collections
                 Console.WriteLine($" - {f}");
 
             // =================================================================================================
-            // 3. DICTIONARY<TKey, TValue> — KEY/VALUE PAIRS
+            // 3. DICTIONARY<TKey, TValue> - KEY/VALUE PAIRS
             // -------------------------------------------------------------------------------------------------
             // Ideal for associating unique keys (like IDs) with values (like names).
             // Provides fast lookups by key.
@@ -96,7 +96,7 @@ namespace CS_Zero_Hero.collections
             studentGrades.Remove(1);
 
             // =================================================================================================
-            // 4. QUEUE<T> — FIRST-IN, FIRST-OUT (FIFO)
+            // 4. QUEUE<T> - FIRST-IN, FIRST-OUT (FIFO)
             // -------------------------------------------------------------------------------------------------
             // Useful for processing tasks in the order they arrive (e.g. print queues).
             // -------------------------------------------------------------------------------------------------
@@ -117,7 +117,7 @@ namespace CS_Zero_Hero.collections
             }
 
             // =================================================================================================
-            // 5. STACK<T> — LAST-IN, FIRST-OUT (LIFO)
+            // 5. STACK<T> - LAST-IN, FIRST-OUT (LIFO)
             // -------------------------------------------------------------------------------------------------
             // Used for undo/redo, backtracking, and nested evaluation.
             // -------------------------------------------------------------------------------------------------
@@ -135,7 +135,7 @@ namespace CS_Zero_Hero.collections
                 Console.WriteLine($"Going back from: {history.Pop()}");
 
             // =================================================================================================
-            // 6. HASHSET<T> — UNIQUE ELEMENT COLLECTION
+            // 6. HASHSET<T> - UNIQUE ELEMENT COLLECTION
             // -------------------------------------------------------------------------------------------------
             // A HashSet stores unique items and supports efficient set operations:
             //   Union, Intersection, Difference, Symmetric Difference
@@ -149,32 +149,32 @@ namespace CS_Zero_Hero.collections
             Console.WriteLine("Employees: " + string.Join(", ", employees));
             Console.WriteLine("Students:  " + string.Join(", ", students));
 
-            // Union → all unique elements from both sets
+            // Union -> all unique elements from both sets
             var union = new HashSet<string>(employees);
             union.UnionWith(students);
-            Console.WriteLine("\nUnion (A ∪ B): " + string.Join(", ", union));
+            Console.WriteLine("\nUnion (A or B): " + string.Join(", ", union));
 
-            // Intersection → elements common to both sets
+            // Intersection -> elements common to both sets
             var intersect = new HashSet<string>(employees);
             intersect.IntersectWith(students);
-            Console.WriteLine("Intersection (A ∩ B): " + string.Join(", ", intersect));
+            Console.WriteLine("Intersection (A and B): " + string.Join(", ", intersect));
 
-            // Difference → elements in A but not in B
+            // Difference -> elements in A but not in B
             var diff = new HashSet<string>(employees);
             diff.ExceptWith(students);
-            Console.WriteLine("Difference (A − B): " + string.Join(", ", diff));
+            Console.WriteLine("Difference (A - B): " + string.Join(", ", diff));
 
-            // Symmetric Difference → elements unique to each set
+            // Symmetric Difference -> elements unique to each set
             var symDiff = new HashSet<string>(employees);
             symDiff.SymmetricExceptWith(students);
-            Console.WriteLine("Symmetric Difference (A Δ B): " + string.Join(", ", symDiff));
+            Console.WriteLine("Symmetric Difference (A xor B): " + string.Join(", ", symDiff));
 
             // =================================================================================================
             // 7. COLLECTION INTERFACES
             // -------------------------------------------------------------------------------------------------
-            // IEnumerable<T> — allows foreach iteration
-            // ICollection<T> — adds Count, Add, Remove, Clear
-            // IList<T> — adds index-based access
+            // IEnumerable<T> - allows foreach iteration
+            // ICollection<T> - adds Count, Add, Remove, Clear
+            // IList<T> - adds index-based access
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("\n-- Interfaces Summary --");
@@ -187,18 +187,18 @@ namespace CS_Zero_Hero.collections
             // =================================================================================================
             // SUMMARY
             // -------------------------------------------------------------------------------------------------
-            // ✅ List<T> → dynamic, ordered, indexed
-            // ✅ Dictionary<TKey, TValue> → key-based lookup
-            // ✅ Queue<T> → first-in, first-out
-            // ✅ Stack<T> → last-in, first-out
-            // ✅ HashSet<T> → unique elements and set operations
+            // - List<T> -> dynamic, ordered, indexed
+            // - Dictionary<TKey, TValue> -> key-based lookup
+            // - Queue<T> -> first-in, first-out
+            // - Stack<T> -> last-in, first-out
+            // - HashSet<T> -> unique elements and set operations
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("\n=== END OF 06_COLLECTIONS MODULE ===");
         }
 
         // -------------------------------------------------------------------------------------------------
-        // SUPPORTING METHOD — Demonstrate IEnumerable parameter
+        // SUPPORTING METHOD - Demonstrate IEnumerable parameter
         // -------------------------------------------------------------------------------------------------
         static void PrintAll(IEnumerable<string> collection)
         {

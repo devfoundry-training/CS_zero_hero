@@ -1,4 +1,4 @@
-﻿// =====================================================================================================
+// =====================================================================================================
 // 08_STRING_MANIPULATION.cs
 // -----------------------------------------------------------------------------------------------------
 // PURPOSE:
@@ -30,7 +30,7 @@ namespace CS_Zero_Hero.string_manipulation
             Console.WriteLine("=== ADVANCED STRING MANIPULATION ===\n");
 
             // =================================================================================================
-            // 1. SUBSTRINGS — EXTRACTING SECTIONS
+            // 1. SUBSTRINGS - EXTRACTING SECTIONS
             // -------------------------------------------------------------------------------------------------
             // Substring() lets you extract part of a string using start index and optional length.
             // -------------------------------------------------------------------------------------------------
@@ -44,7 +44,7 @@ namespace CS_Zero_Hero.string_manipulation
             Console.WriteLine($"Animal: {animal}");
             Console.WriteLine($"To end: {toEnd}");
 
-            // NOTE: Indexing errors (e.g. too high start/length) cause exceptions — always validate lengths.
+            // NOTE: Indexing errors (e.g. too high start/length) cause exceptions - always validate lengths.
 
             // C# 8+ RANGE OPERATOR (cleaner slicing)
             Console.WriteLine("\n-- Range Operator --");
@@ -72,7 +72,7 @@ namespace CS_Zero_Hero.string_manipulation
             // - Remove() and Insert() are great for parsing or reconstructing data.
 
             // =================================================================================================
-            // 3. SPLIT() AND JOIN() — WORKING WITH ARRAYS OF WORDS
+            // 3. SPLIT() AND JOIN() - WORKING WITH ARRAYS OF WORDS
             // -------------------------------------------------------------------------------------------------
             // Strings can be broken into parts and reassembled easily.
             // -------------------------------------------------------------------------------------------------
@@ -123,7 +123,7 @@ namespace CS_Zero_Hero.string_manipulation
             Console.WriteLine($"\nTrimmed: '{messy.Trim()}'");
 
             Console.WriteLine($"PadLeft(20): '{messy.Trim().PadLeft(20)}'");
-            Console.WriteLine($"PadRight(20, '.') : '{messy.Trim().PadRight(20, '.')}‘");
+            Console.WriteLine($"PadRight(20, '.') : '{messy.Trim().PadRight(20, '.')}'");
 
             // Normalize ensures consistent character encoding (important in globalized apps)
             string accented = "café";
@@ -144,7 +144,7 @@ namespace CS_Zero_Hero.string_manipulation
                 string[] kv = p.Split('=');
                 string key = kv[0];
                 string value = kv.Length > 1 ? kv[1] : "";
-                Console.WriteLine($"{key,-6} → {value}");
+                Console.WriteLine($"{key,-6} -> {value}");
             }
 
             // TIP: Split with StringSplitOptions.RemoveEmptyEntries to clean whitespace or blank tokens.
@@ -189,7 +189,7 @@ namespace CS_Zero_Hero.string_manipulation
             // You can also use char methods like IsWhiteSpace, IsUpper, ToUpperInvariant, etc.
 
             // =================================================================================================
-            // 9. PERFORMANCE — STRINGBUILDER VS STRING
+            // 9. PERFORMANCE - STRINGBUILDER VS STRING
             // -------------------------------------------------------------------------------------------------
             // StringBuilder is faster for large concatenations or loops.
             // -------------------------------------------------------------------------------------------------
@@ -233,13 +233,13 @@ namespace CS_Zero_Hero.string_manipulation
             // =================================================================================================
             // SUMMARY
             // -------------------------------------------------------------------------------------------------
-            // ✅ Substring, slicing, and range extraction
-            // ✅ Replace, Insert, Remove, and Rebuild
-            // ✅ Split and Join for text parsing
-            // ✅ IndexOf, Contains, and LastIndexOf for searching
-            // ✅ Trim, Pad, and Normalize for cleanup
-            // ✅ StringBuilder for performance
-            // ✅ Chaining for powerful text pipelines
+            // - Substring, slicing, and range extraction
+            // - Replace, Insert, Remove, and Rebuild
+            // - Split and Join for text parsing
+            // - IndexOf, Contains, and LastIndexOf for searching
+            // - Trim, Pad, and Normalize for cleanup
+            // - StringBuilder for performance
+            // - Chaining for powerful text pipelines
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("\n=== END OF 08_STRING_MANIPULATION MODULE ===");

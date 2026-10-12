@@ -1,4 +1,4 @@
-﻿// AccessModifiers.cs
+// AccessModifiers.cs
 
 /*
     ==============================
@@ -8,16 +8,16 @@
     Access modifiers control the visibility (or accessibility) of classes,
     methods, and other members in your C# program.
 
-    ┌──────────────────────────────┬──────────────────────────────────────────────┐
-    │ Modifier                     │ Accessible From                              │
-    ├──────────────────────────────┼──────────────────────────────────────────────┤
-    │ public                       │ Anywhere (inside or outside the project)     │
-    │ private                      │ Only within the same class                   │
-    │ protected                    │ Same class AND derived (child) classes       │
-    │ internal                     │ Only within the same project (assembly)      │
-    │ protected internal           │ Derived classes OR same project              │
-    │ private protected            │ Derived classes AND same project             │
-    └──────────────────────────────┴──────────────────────────────────────────────┘
+    +------------------------------+----------------------------------------------+
+    | Modifier                     | Accessible From                              |
+    +------------------------------+----------------------------------------------+
+    | public                       | Anywhere (inside or outside the project)     |
+    | private                      | Only within the same class                   |
+    | protected                    | Same class AND derived (child) classes       |
+    | internal                     | Only within the same project (assembly)      |
+    | protected internal           | Derived classes OR same project              |
+    | private protected            | Derived classes AND same project             |
+    +------------------------------+----------------------------------------------+
 
     ------------------------------------------------------------------------------
     internal (Keyword)
@@ -75,6 +75,6 @@ public class PublicHelper
     - Use public only for your intended API or reusable library interfaces.
 
     Want to test this? Try creating another project in the same solution,
-    reference this one, and attempt to use InternalHelper — it won’t work unless
-    it’s public!
+    reference this one, and attempt to use InternalHelper - it won't work unless
+    it's public!
 */

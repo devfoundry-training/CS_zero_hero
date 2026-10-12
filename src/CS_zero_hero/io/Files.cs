@@ -1,4 +1,4 @@
-﻿// =====================================================================================================
+// =====================================================================================================
 // 09_IO.cs
 // -----------------------------------------------------------------------------------------------------
 // PURPOSE:
@@ -106,13 +106,13 @@ namespace CS_Zero_Hero.io
             string[] files = Directory.GetFiles(dirPath);
             foreach (string f in files)
             {
-                Console.WriteLine($"→ {Path.GetFileName(f)}");
+                Console.WriteLine($"-> {Path.GetFileName(f)}");
             }
 
             // =================================================================================================
             // 5. HANDLING FILE ERRORS
             // -------------------------------------------------------------------------------------------------
-            // Reading non-existent files can cause exceptions — we'll handle this properly in the next module.
+            // Reading non-existent files can cause exceptions - we'll handle this properly in the next module.
             // -------------------------------------------------------------------------------------------------
             Console.WriteLine("\nAttempting to read a missing file:");
             string missing = "does_not_exist.txt";
@@ -125,10 +125,10 @@ namespace CS_Zero_Hero.io
             // =================================================================================================
             // SUMMARY
             // -------------------------------------------------------------------------------------------------
-            // ✅ File.ReadAllText / WriteAllText → quick operations
-            // ✅ StreamReader / StreamWriter → controlled access
-            // ✅ Directory / Path classes → manage folders and paths
-            // ✅ Always check File.Exists() before reading
+            // - File.ReadAllText / WriteAllText -> quick operations
+            // - StreamReader / StreamWriter -> controlled access
+            // - Directory / Path classes -> manage folders and paths
+            // - Always check File.Exists() before reading
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("\n=== END OF 09_IO MODULE ===");

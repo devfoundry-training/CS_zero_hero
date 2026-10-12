@@ -1,5 +1,5 @@
 // Polymorphism Example in C#
-// Polymorphism means "many forms" – enables the same method to behave differently based on the object
+// Polymorphism means "many forms" - enables the same method to behave differently based on the object
 // Promotes flexibility and scalability in code
 
 

@@ -1,15 +1,15 @@
-﻿// =====================================================================================================
+// =====================================================================================================
 // 17_LINQ.cs
 // -----------------------------------------------------------------------------------------------------
 // PURPOSE:
-// Introduce Language Integrated Query (LINQ) — a feature that brings SQL-like querying
+// Introduce Language Integrated Query (LINQ) - a feature that brings SQL-like querying
 // capabilities directly into C# for working with collections and data.
 //
 // LINQ lets you query, filter, transform, and combine data in a clear, expressive, and type-safe way.
 // -----------------------------------------------------------------------------------------------------
 //
 // LESSON OBJECTIVES:
-// - Understand what LINQ is and why it’s useful
+// - Understand what LINQ is and why it's useful
 // - Learn the two syntaxes: Query syntax and Method (Lambda) syntax
 // - Use LINQ to filter, project, sort, and group data
 // - Apply LINQ on arrays, lists, and custom objects
@@ -29,7 +29,7 @@ namespace CS_Zero_Hero.linq
             Console.WriteLine("=== LANGUAGE INTEGRATED QUERY (LINQ) ===\n");
 
             // =================================================================================================
-            // 1️⃣ WHAT IS LINQ?
+            // 1. WHAT IS LINQ?
             // -------------------------------------------------------------------------------------------------
             // LINQ stands for Language Integrated Query.
             //
@@ -66,10 +66,10 @@ namespace CS_Zero_Hero.linq
                 Console.WriteLine(n);
 
             // =================================================================================================
-            // 2️⃣ FILTERING AND PROJECTION
+            // 2. FILTERING AND PROJECTION
             // -------------------------------------------------------------------------------------------------
-            // Filtering → where()
-            // Projection → select()
+            // Filtering -> where()
+            // Projection -> select()
             // -------------------------------------------------------------------------------------------------
 
             List<string> names = new List<string> { "Luke", "Leia", "Han", "Lando", "Rey", "Finn" };
@@ -88,7 +88,7 @@ namespace CS_Zero_Hero.linq
                 .Select(n => n.ToUpper());
 
             // =================================================================================================
-            // 3️⃣ ORDERING AND LIMITING RESULTS
+            // 3. ORDERING AND LIMITING RESULTS
             // -------------------------------------------------------------------------------------------------
             // LINQ supports ordering (OrderBy / OrderByDescending)
             // and limiting (Take / Skip)
@@ -104,7 +104,7 @@ namespace CS_Zero_Hero.linq
                 Console.WriteLine(name);
 
             // =================================================================================================
-            // 4️⃣ AGGREGATION AND STATISTICS
+            // 4. AGGREGATION AND STATISTICS
             // -------------------------------------------------------------------------------------------------
             // LINQ provides aggregation methods:
             // Sum(), Count(), Average(), Min(), Max(), Any(), All()
@@ -120,9 +120,9 @@ namespace CS_Zero_Hero.linq
             Console.WriteLine($"All > 0? {numbers.All(n => n > 0)}");
 
             // =================================================================================================
-            // 5️⃣ GROUPING AND JOINING
+            // 5. GROUPING AND JOINING
             // -------------------------------------------------------------------------------------------------
-            // LINQ can group elements based on a key — like SQL’s GROUP BY.
+            // LINQ can group elements based on a key - like SQL's GROUP BY.
             // -------------------------------------------------------------------------------------------------
 
             var grouped = from name in names
@@ -159,10 +159,10 @@ namespace CS_Zero_Hero.linq
 
             Console.WriteLine("\n-- Student Grades (Join Example) --");
             foreach (var entry in joined)
-                Console.WriteLine($"{entry.Name} → {entry.Grade}");
+                Console.WriteLine($"{entry.Name} -> {entry.Grade}");
 
             // =================================================================================================
-            // 6️⃣ CUSTOM OBJECT QUERIES
+            // 6. CUSTOM OBJECT QUERIES
             // -------------------------------------------------------------------------------------------------
             // LINQ works seamlessly with your own classes and types.
             // -------------------------------------------------------------------------------------------------
@@ -186,10 +186,10 @@ namespace CS_Zero_Hero.linq
             // =================================================================================================
             // SUMMARY
             // -------------------------------------------------------------------------------------------------
-            // ✅ LINQ provides query-like operations directly on objects
-            // ✅ Works with arrays, lists, dictionaries, and custom types
-            // ✅ Query syntax vs Method (Lambda) syntax
-            // ✅ Supports filtering, sorting, grouping, joining, and aggregation
+            // - LINQ provides query-like operations directly on objects
+            // - Works with arrays, lists, dictionaries, and custom types
+            // - Query syntax vs Method (Lambda) syntax
+            // - Supports filtering, sorting, grouping, joining, and aggregation
             // -------------------------------------------------------------------------------------------------
             Console.WriteLine("\n=== END OF 12_LINQ MODULE ===");
         }
@@ -198,7 +198,7 @@ namespace CS_Zero_Hero.linq
     // Simple product class for demonstration
     public class Product
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = "";
         public double Price { get; set; }
     }
 }

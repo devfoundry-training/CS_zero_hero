@@ -1,11 +1,11 @@
-﻿// =====================================================================================================
+// =====================================================================================================
 // 03_OPERATORS.cs
 // -----------------------------------------------------------------------------------------------------
 // PURPOSE:
 // Introduce the operators that make C# expressions work.
 //
 // Operators are symbols that perform actions on variables and values.
-// They are the "verbs" of your code — things that combine, compare, and modify data.
+// They are the "verbs" of your code - things that combine, compare, and modify data.
 //
 // -----------------------------------------------------------------------------------------------------
 //
@@ -30,7 +30,7 @@ namespace CS_Zero_Hero.operators
             Console.WriteLine("=== OPERATORS IN C# ===\n");
 
             // =================================================================================================
-            // 1️⃣ ARITHMETIC OPERATORS
+            // 1. ARITHMETIC OPERATORS
             // -------------------------------------------------------------------------------------------------
             // These perform mathematical calculations on numeric types (int, double, float, decimal).
             // -------------------------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ namespace CS_Zero_Hero.operators
             Console.WriteLine($"Accurate division (double): {result}\n");
 
             // =================================================================================================
-            // 2️⃣ ASSIGNMENT OPERATORS
+            // 2. ASSIGNMENT OPERATORS
             // -------------------------------------------------------------------------------------------------
             // Used to assign or update values. Often combined with arithmetic for shorthand updates.
             // -------------------------------------------------------------------------------------------------
@@ -59,22 +59,22 @@ namespace CS_Zero_Hero.operators
             Console.WriteLine("-- Assignment Operators --");
 
             x += 2; // same as x = x + 2
-            Console.WriteLine($"x += 2 → {x}");
+            Console.WriteLine($"x += 2 -> {x}");
 
             x -= 3; // same as x = x - 3
-            Console.WriteLine($"x -= 3 → {x}");
+            Console.WriteLine($"x -= 3 -> {x}");
 
             x *= 4; // same as x = x * 4
-            Console.WriteLine($"x *= 4 → {x}");
+            Console.WriteLine($"x *= 4 -> {x}");
 
             x /= 2; // same as x = x / 2
-            Console.WriteLine($"x /= 2 → {x}");
+            Console.WriteLine($"x /= 2 -> {x}");
 
             x %= 3; // same as x = x % 3
-            Console.WriteLine($"x %= 3 → {x}\n");
+            Console.WriteLine($"x %= 3 -> {x}\n");
 
             // =================================================================================================
-            // 3️⃣ COMPARISON OPERATORS
+            // 3. COMPARISON OPERATORS
             // -------------------------------------------------------------------------------------------------
             // Return a Boolean (true/false). Used in conditions (if, loops, etc.).
             // -------------------------------------------------------------------------------------------------
@@ -83,17 +83,17 @@ namespace CS_Zero_Hero.operators
             int num2 = 20;
 
             Console.WriteLine("-- Comparison Operators --");
-            Console.WriteLine($"{num1} == {num2} → {num1 == num2}"); // equal
-            Console.WriteLine($"{num1} != {num2} → {num1 != num2}"); // not equal
-            Console.WriteLine($"{num1} > {num2}  → {num1 > num2}");  // greater than
-            Console.WriteLine($"{num1} < {num2}  → {num1 < num2}");  // less than
-            Console.WriteLine($"{num1} >= {num2} → {num1 >= num2}"); // greater or equal
-            Console.WriteLine($"{num1} <= {num2} → {num1 <= num2}\n"); // less or equal
+            Console.WriteLine($"{num1} == {num2} -> {num1 == num2}"); // equal
+            Console.WriteLine($"{num1} != {num2} -> {num1 != num2}"); // not equal
+            Console.WriteLine($"{num1} > {num2}  -> {num1 > num2}");  // greater than
+            Console.WriteLine($"{num1} < {num2}  -> {num1 < num2}");  // less than
+            Console.WriteLine($"{num1} >= {num2} -> {num1 >= num2}"); // greater or equal
+            Console.WriteLine($"{num1} <= {num2} -> {num1 <= num2}\n"); // less or equal
 
             // These are most often used inside if-statements, loops, and switch expressions.
 
             // =================================================================================================
-            // 4️⃣ LOGICAL OPERATORS
+            // 4. LOGICAL OPERATORS
             // -------------------------------------------------------------------------------------------------
             // Combine multiple Boolean expressions.
             // -------------------------------------------------------------------------------------------------
@@ -102,16 +102,16 @@ namespace CS_Zero_Hero.operators
             bool isWarm = false;
 
             Console.WriteLine("-- Logical Operators --");
-            Console.WriteLine($"isSunny && isWarm → {isSunny && isWarm}"); // AND: both must be true
-            Console.WriteLine($"isSunny || isWarm → {isSunny || isWarm}"); // OR: at least one true
-            Console.WriteLine($"!isSunny → {!isSunny}");                   // NOT: reverses the value
-            Console.WriteLine($"!(isSunny && isWarm) → {!(isSunny && isWarm)}\n");
+            Console.WriteLine($"isSunny && isWarm -> {isSunny && isWarm}"); // AND: both must be true
+            Console.WriteLine($"isSunny || isWarm -> {isSunny || isWarm}"); // OR: at least one true
+            Console.WriteLine($"!isSunny -> {!isSunny}");                   // NOT: reverses the value
+            Console.WriteLine($"!(isSunny && isWarm) -> {!(isSunny && isWarm)}\n");
 
             // Logical operators are crucial for complex conditions like:
             // if (age >= 18 && hasTicket) { ... }
 
             // =================================================================================================
-            // 5️⃣ INCREMENT / DECREMENT
+            // 5. INCREMENT / DECREMENT
             // -------------------------------------------------------------------------------------------------
             // ++ increases by 1, -- decreases by 1.
             // There are two forms: prefix (++x) and postfix (x++).
@@ -131,7 +131,7 @@ namespace CS_Zero_Hero.operators
             Console.WriteLine($"After decrement: {counter}\n");
 
             // =================================================================================================
-            // 6️⃣ OPERATOR PRECEDENCE
+            // 6. OPERATOR PRECEDENCE
             // -------------------------------------------------------------------------------------------------
             // The order in which operators are evaluated.
             // Multiplication and division happen before addition and subtraction (like math).
@@ -139,15 +139,15 @@ namespace CS_Zero_Hero.operators
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("-- Operator Precedence --");
-            int result1 = 5 + 2 * 3;       // 2*3 runs first → 5 + 6 = 11
-            int result2 = (5 + 2) * 3;     // parentheses change order → 7*3 = 21
+            int result1 = 5 + 2 * 3;       // 2*3 runs first -> 5 + 6 = 11
+            int result2 = (5 + 2) * 3;     // parentheses change order -> 7*3 = 21
             Console.WriteLine($"5 + 2 * 3 = {result1}");
             Console.WriteLine($"(5 + 2) * 3 = {result2}\n");
 
-            // In real code, ALWAYS use parentheses for readability — it prevents subtle bugs.
+            // In real code, ALWAYS use parentheses for readability - it prevents subtle bugs.
 
             // =================================================================================================
-            // 7️⃣ THE TERNARY OPERATOR (?:)
+            // 7. THE TERNARY OPERATOR (?:)
             // -------------------------------------------------------------------------------------------------
             // A compact form of if/else for expressions.
             // Syntax: condition ? value_if_true : value_if_false
@@ -162,9 +162,9 @@ namespace CS_Zero_Hero.operators
             // Nested ternaries are possible but can hurt readability. Use sparingly.
 
             // =================================================================================================
-            // 8️⃣ COMBINING OPERATORS — MINI EXAMPLE
+            // 8. COMBINING OPERATORS - MINI EXAMPLE
             // -------------------------------------------------------------------------------------------------
-            // Let’s combine a few operator types to simulate a simple logical check.
+            // Let's combine a few operator types to simulate a simple logical check.
             // -------------------------------------------------------------------------------------------------
 
             int temperature = 25;
@@ -183,13 +183,13 @@ namespace CS_Zero_Hero.operators
             // =================================================================================================
             // SUMMARY
             // -------------------------------------------------------------------------------------------------
-            // ✅ Arithmetic → + - * / %
-            // ✅ Assignment → = += -= *= /= %=
-            // ✅ Comparison → == != > < >= <=
-            // ✅ Logical → && || !
-            // ✅ Increment/Decrement → ++ --
-            // ✅ Precedence → use parentheses to control order
-            // ✅ Ternary → short conditional expressions
+            // - Arithmetic -> + - * / %
+            // - Assignment -> = += -= *= /= %=
+            // - Comparison -> == != > < >= <=
+            // - Logical -> && || !
+            // - Increment/Decrement -> ++ --
+            // - Precedence -> use parentheses to control order
+            // - Ternary -> short conditional expressions
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("\n=== END OF 03_OPERATORS MODULE ===");

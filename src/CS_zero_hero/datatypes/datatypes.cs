@@ -1,10 +1,10 @@
-﻿// =====================================================================================================
+// =====================================================================================================
 // 02_DATATYPES.cs
 // -----------------------------------------------------------------------------------------------------
 // PURPOSE:
-// Introduce C#’s type system — the foundation of all variables, logic, and objects.
+// Introduce C#'s type system - the foundation of all variables, logic, and objects.
 //
-// This module explains how types are represented in memory, what “value” vs “reference”
+// This module explains how types are represented in memory, what "value" vs "reference"
 // means, how the compiler enforces type safety, and how common built-in types work.
 // -----------------------------------------------------------------------------------------------------
 
@@ -19,12 +19,12 @@ namespace CS_Zero_Hero.datatypes
             Console.WriteLine("=== C# DATA TYPES ===\n");
 
             // =================================================================================================
-            // VALUE TYPES — STORED DIRECTLY ON THE STACK
+            // VALUE TYPES - STORED DIRECTLY ON THE STACK
             // -------------------------------------------------------------------------------------------------
             // Value types contain their data *directly*. When you copy them, the data is duplicated.
             // Examples: int, double, bool, char, struct, enum.
             // -------------------------------------------------------------------------------------------------
-            Console.WriteLine("• VALUE TYPES (stored on the stack)\n");
+            Console.WriteLine("- VALUE TYPES (stored on the stack)\n");
 
             int intExample = 42;         // 32-bit integer
             double doubleExample = 3.14159; // 64-bit floating point
@@ -60,13 +60,13 @@ namespace CS_Zero_Hero.datatypes
             Console.WriteLine($"\nCopy behavior: a = {a}, b = {b} (value types are independent)");
 
             // =================================================================================================
-            // REFERENCE TYPES — STORED ON THE HEAP
+            // REFERENCE TYPES - STORED ON THE HEAP
             // -------------------------------------------------------------------------------------------------
             // Reference types store *references* (pointers) to data on the heap.
             // Copying a reference variable copies the pointer, not the data.
             // Examples: string, class, array, interface, delegate.
             // -------------------------------------------------------------------------------------------------
-            Console.WriteLine("\n• REFERENCE TYPES (stored on the heap)\n");
+            Console.WriteLine("\n- REFERENCE TYPES (stored on the heap)\n");
 
             string name = "Alice";   // string is a reference type, but immutable
             string copy = name;      // both reference the same string in memory
@@ -84,12 +84,12 @@ namespace CS_Zero_Hero.datatypes
             Console.WriteLine($"Person p2.Name = {p2.Name}");
 
             // =================================================================================================
-            // TYPE INFERENCE — VAR
+            // TYPE INFERENCE - VAR
             // -------------------------------------------------------------------------------------------------
             // The 'var' keyword lets the compiler infer the type from the value.
             // The resulting variable is still *statically typed* (not dynamic).
             // -------------------------------------------------------------------------------------------------
-            Console.WriteLine("\n• TYPE INFERENCE (var)\n");
+            Console.WriteLine("\n- TYPE INFERENCE (var)\n");
 
             var count = 10;              // inferred as int
             var message = "Hello World"; // inferred as string
@@ -102,14 +102,14 @@ namespace CS_Zero_Hero.datatypes
             // =================================================================================================
             // BOXING AND UNBOXING
             // -------------------------------------------------------------------------------------------------
-            // Value types can be "boxed" — wrapped inside an object — when assigned to a reference variable.
-            // "Unboxing" extracts the value back out. There’s a small performance cost.
+            // Value types can be "boxed" - wrapped inside an object - when assigned to a reference variable.
+            // "Unboxing" extracts the value back out. There's a small performance cost.
             // -------------------------------------------------------------------------------------------------
-            Console.WriteLine("\n• BOXING AND UNBOXING\n");
+            Console.WriteLine("\n- BOXING AND UNBOXING\n");
 
             int value = 100;           // value type
-            object boxed = value;      // boxing: int → object
-            int unboxed = (int)boxed;  // unboxing: object → int
+            object boxed = value;      // boxing: int -> object
+            int unboxed = (int)boxed;  // unboxing: object -> int
 
             Console.WriteLine($"Original int: {value}");
             Console.WriteLine($"Boxed as object: {boxed}");
@@ -121,7 +121,7 @@ namespace CS_Zero_Hero.datatypes
             // Value types (like int, bool, double) normally cannot be null.
             // A nullable type (T?) allows you to represent "no value".
             // -------------------------------------------------------------------------------------------------
-            Console.WriteLine("\n• NULLABLE TYPES (int?)\n");
+            Console.WriteLine("\n- NULLABLE TYPES (int?)\n");
 
             int? optionalValue = null; // nullable int
             Console.WriteLine(optionalValue.HasValue
@@ -137,10 +137,10 @@ namespace CS_Zero_Hero.datatypes
             // =================================================================================================
             // ENUMS AND CONSTANTS
             // -------------------------------------------------------------------------------------------------
-            // Enums define a set of named numeric constants — ideal for representing categories or states.
+            // Enums define a set of named numeric constants - ideal for representing categories or states.
             // Constants define fixed compile-time values that cannot change.
             // -------------------------------------------------------------------------------------------------
-            Console.WriteLine("\n• ENUMS AND CONSTANTS\n");
+            Console.WriteLine("\n- ENUMS AND CONSTANTS\n");
 
             Direction dir = Direction.East;
             Console.WriteLine($"Current direction: {dir}");
@@ -155,7 +155,7 @@ namespace CS_Zero_Hero.datatypes
             // Strings are reference types but act like value types because they are *immutable*.
             // Changing a string actually creates a new object in memory.
             // -------------------------------------------------------------------------------------------------
-            Console.WriteLine("\n• STRINGS AND IMMUTABILITY\n");
+            Console.WriteLine("\n- STRINGS AND IMMUTABILITY\n");
 
             string original = "Hello";
             string modified = original.Replace("H", "Y"); // creates a NEW string object
@@ -166,12 +166,12 @@ namespace CS_Zero_Hero.datatypes
             // =================================================================================================
             // SUMMARY OF BEHAVIOR
             // -------------------------------------------------------------------------------------------------
-            // • Value types live on the stack — copying creates *independent* values.
-            // • Reference types live on the heap — copying copies the *reference*.
-            // • Strings are reference types but immutable.
-            // • 'var' infers type but remains strongly typed.
-            // • Nullable types allow "no value" for value types.
-            // • Enums and constants create readable, safe identifiers for fixed values.
+            // - Value types live on the stack - copying creates *independent* values.
+            // - Reference types live on the heap - copying copies the *reference*.
+            // - Strings are reference types but immutable.
+            // - 'var' infers type but remains strongly typed.
+            // - Nullable types allow "no value" for value types.
+            // - Enums and constants create readable, safe identifiers for fixed values.
             // -------------------------------------------------------------------------------------------------
             Console.WriteLine("\n=== END OF 02_DATATYPES MODULE ===");
         }

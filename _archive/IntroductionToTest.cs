@@ -1,4 +1,4 @@
-﻿// File: CalculatorApp.cs
+// File: CalculatorApp.cs
 // ===========================================
 // Simple Calculator with Add, Subtract, Multiply, Divide
 // Demonstrates exception handling for division by zero.

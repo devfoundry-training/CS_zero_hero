@@ -1,4 +1,4 @@
-﻿// =====================================================================================================
+// =====================================================================================================
 // 04_CONTROL_FLOW.cs
 // -----------------------------------------------------------------------------------------------------
 // PURPOSE:
@@ -26,7 +26,7 @@ namespace CS_Zero_Hero.control_flow
             Console.WriteLine("=== CONTROL FLOW ===\n");
 
             // =================================================================================================
-            // 1️⃣ CONDITIONALS — IF / ELSE
+            // 1. CONDITIONALS - IF / ELSE
             // -------------------------------------------------------------------------------------------------
             // Control flow begins with decision-making.
             // C# evaluates a Boolean condition (true/false) to decide which block to execute.
@@ -71,7 +71,7 @@ namespace CS_Zero_Hero.control_flow
             }
 
             // =================================================================================================
-            // 2️⃣ SWITCH STATEMENTS
+            // 2. SWITCH STATEMENTS
             // -------------------------------------------------------------------------------------------------
             // A switch is an elegant alternative to many if/else statements.
             // -------------------------------------------------------------------------------------------------
@@ -110,21 +110,21 @@ namespace CS_Zero_Hero.control_flow
             Console.WriteLine($"Mood for {day}: {mood}");
 
             // =================================================================================================
-            // 3️⃣ LOOPS — REPETITION
+            // 3. LOOPS - REPETITION
             // -------------------------------------------------------------------------------------------------
             // Loops allow code to repeat until a condition changes.
             // Common types: for, while, do-while, foreach
             // -------------------------------------------------------------------------------------------------
             Console.WriteLine("\n-- LOOPS --");
 
-            // FOR LOOP — runs a set number of times
-            Console.WriteLine("For loop: counting 0–4");
+            // FOR LOOP - runs a set number of times
+            Console.WriteLine("For loop: counting 0-4");
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine($"i = {i}");
             }
 
-            // WHILE LOOP — continues while condition is true
+            // WHILE LOOP - continues while condition is true
             Console.WriteLine("\nWhile loop: countdown");
             int countdown = 3;
             while (countdown > 0)
@@ -133,7 +133,7 @@ namespace CS_Zero_Hero.control_flow
                 countdown--;
             }
 
-            // DO-WHILE LOOP — runs at least once, even if condition is false
+            // DO-WHILE LOOP - runs at least once, even if condition is false
             Console.WriteLine("\nDo-While loop example:");
             int number;
             do
@@ -145,7 +145,7 @@ namespace CS_Zero_Hero.control_flow
             while (number <= 10);
             Console.WriteLine($"You entered: {number}");
 
-            // FOREACH LOOP — iterate through a collection (read-only)
+            // FOREACH LOOP - iterate through a collection (read-only)
             Console.WriteLine("\nForeach loop example:");
             string[] names = { "Luke", "Leia", "Han" };
             foreach (string name in names)
@@ -156,7 +156,7 @@ namespace CS_Zero_Hero.control_flow
             // Note: foreach creates a read-only copy of each element; you cannot modify the array directly.
 
             // =================================================================================================
-            // 4️⃣ LOOP SCOPE AND VARIABLES
+            // 4. LOOP SCOPE AND VARIABLES
             // -------------------------------------------------------------------------------------------------
             // Variables declared inside a loop only exist within that loop's block.
             // The variable 'i' in the for-loop above is not accessible outside it.
@@ -167,14 +167,14 @@ namespace CS_Zero_Hero.control_flow
                 int inner = i * 10;
                 Console.WriteLine($"Inner value: {inner}");
             }
-            // Console.WriteLine(inner); // would cause an error — 'inner' is out of scope
+            // Console.WriteLine(inner); // would cause an error - 'inner' is out of scope
 
             // =================================================================================================
-            // 5️⃣ BREAK / CONTINUE / RETURN
+            // 5. BREAK / CONTINUE / RETURN
             // -------------------------------------------------------------------------------------------------
-            // break     → exits the current loop immediately
-            // continue  → skips the rest of the loop iteration and moves to the next
-            // return    → exits the method entirely
+            // break     -> exits the current loop immediately
+            // continue  -> skips the rest of the loop iteration and moves to the next
+            // return    -> exits the method entirely
             // -------------------------------------------------------------------------------------------------
             Console.WriteLine("\n-- BREAK & CONTINUE --");
 
@@ -201,7 +201,7 @@ namespace CS_Zero_Hero.control_flow
             CheckTemperature(35);
 
             // =================================================================================================
-            // 6️⃣ COMBINED LOGIC — SIMPLE PROGRAM FLOW
+            // 6. COMBINED LOGIC - SIMPLE PROGRAM FLOW
             // -------------------------------------------------------------------------------------------------
             // Now combine everything: logic + loops + decisions
             // -------------------------------------------------------------------------------------------------
@@ -228,22 +228,22 @@ namespace CS_Zero_Hero.control_flow
             Console.WriteLine("Battery empty. Shutting down...");
 
             // =================================================================================================
-            // 7️⃣ TERNARY RECAP (Compact Conditional)
+            // 7. TERNARY RECAP (Compact Conditional)
             // -------------------------------------------------------------------------------------------------
             // Quick review: A short way to assign a value based on a condition.
             // -------------------------------------------------------------------------------------------------
             int age = 17;
             string eligibility = (age >= 18) ? "Adult" : "Minor";
-            Console.WriteLine($"\nTernary example — Age: {age} → {eligibility}");
+            Console.WriteLine($"\nTernary example - Age: {age} -> {eligibility}");
 
             // =================================================================================================
             // SUMMARY
             // -------------------------------------------------------------------------------------------------
-            // ✅ if / else → branching logic
-            // ✅ switch → cleaner multi-branch decisions
-            // ✅ loops → repeat work until condition changes
-            // ✅ break / continue / return → control flow inside loops
-            // ✅ ternary → short form of if/else
+            // - if / else -> branching logic
+            // - switch -> cleaner multi-branch decisions
+            // - loops -> repeat work until condition changes
+            // - break / continue / return -> control flow inside loops
+            // - ternary -> short form of if/else
             // -------------------------------------------------------------------------------------------------
             Console.WriteLine("\n=== END OF 04_CONTROL_FLOW MODULE ===");
         }

@@ -1,4 +1,4 @@
-﻿// =====================================================================================================
+// =====================================================================================================
 // 11_OOP_BASICS.cs
 // -----------------------------------------------------------------------------------------------------
 // PURPOSE:
@@ -28,9 +28,9 @@ namespace CS_Zero_Hero.oop
             Console.WriteLine("=== OBJECT-ORIENTED PROGRAMMING (OOP) BASICS ===\n");
 
             // =================================================================================================
-            // 1️⃣ WHAT IS OBJECT-ORIENTED PROGRAMMING?
+            // 1. WHAT IS OBJECT-ORIENTED PROGRAMMING?
             // -------------------------------------------------------------------------------------------------
-            // OOP (Object-Oriented Programming) is a software design model based on *objects* —
+            // OOP (Object-Oriented Programming) is a software design model based on *objects* -
             // reusable entities that combine DATA (fields/properties) and BEHAVIOUR (methods).
             //
             // Procedural programming executes a list of instructions.
@@ -52,10 +52,10 @@ namespace CS_Zero_Hero.oop
             myCar.DisplayInfo();
 
             // =================================================================================================
-            // 2️⃣ CLASSES VS OBJECTS
+            // 2. CLASSES VS OBJECTS
             // -------------------------------------------------------------------------------------------------
-            // CLASS → A *blueprint* defining structure (data + behaviour)
-            // OBJECT → A *real instance* created from that blueprint
+            // CLASS -> A *blueprint* defining structure (data + behaviour)
+            // OBJECT -> A *real instance* created from that blueprint
             //
             // Think of a class as the design for a house, and an object as a particular house built from it.
             //
@@ -76,7 +76,7 @@ namespace CS_Zero_Hero.oop
             car2.DisplayInfo();
 
             // =================================================================================================
-            // 3️⃣ THE FOUR PILLARS OF OOP
+            // 3. THE FOUR PILLARS OF OOP
             // -------------------------------------------------------------------------------------------------
             // The Four Pillars are the *core design principles* that make OOP powerful.
             // Each will have its own dedicated lesson later.
@@ -85,7 +85,7 @@ namespace CS_Zero_Hero.oop
             Console.WriteLine("\n=== THE FOUR PILLARS OF OOP ===\n");
 
             // -------------------------------------------------------------------------------------------------
-            // 1. ENCAPSULATION — "Protect and Package Data"
+            // 1. ENCAPSULATION - "Protect and Package Data"
             // -------------------------------------------------------------------------------------------------
             // - Keeps data (fields) private and exposes controlled access via properties or methods.
             // - Prevents external code from putting the object into an invalid state.
@@ -99,28 +99,28 @@ namespace CS_Zero_Hero.oop
             //       set { if (value >= 0) _speed = value; }
             //   }
             //
-            // → We’ll explore full encapsulation patterns next in 12_ENCAPSULATION.cs
+            // -> We'll explore full encapsulation patterns next in 12_ENCAPSULATION.cs
             // -------------------------------------------------------------------------------------------------
 
-            Console.WriteLine("1. ENCAPSULATION — Hiding internal details and protecting state.");
+            Console.WriteLine("1. ENCAPSULATION - Hiding internal details and protecting state.");
 
             // -------------------------------------------------------------------------------------------------
-            // 2. INHERITANCE — "Reuse and Extend Behaviour"
+            // 2. INHERITANCE - "Reuse and Extend Behaviour"
             // -------------------------------------------------------------------------------------------------
             // - Allows one class (child) to inherit members from another (parent/base class).
-            // - Promotes reusability — common logic sits in the base, specialized logic in derived types.
+            // - Promotes reusability - common logic sits in the base, specialized logic in derived types.
             //
             // Example (concept):
             //   class Vehicle { public void Start() {...} }
             //   class Car : Vehicle { public void Honk() {...} }
             //
-            // → We’ll cover base and derived classes in 13_INHERITANCE.cs
+            // -> We'll cover base and derived classes in 13_INHERITANCE.cs
             // -------------------------------------------------------------------------------------------------
 
-            Console.WriteLine("2. INHERITANCE — Sharing behaviour between related classes.");
+            Console.WriteLine("2. INHERITANCE - Sharing behaviour between related classes.");
 
             // -------------------------------------------------------------------------------------------------
-            // 3. POLYMORPHISM — "One Interface, Many Forms"
+            // 3. POLYMORPHISM - "One Interface, Many Forms"
             // -------------------------------------------------------------------------------------------------
             // - Allows different classes to respond differently to the same method call.
             // - Achieved via *virtual* methods and *overriding*.
@@ -129,13 +129,13 @@ namespace CS_Zero_Hero.oop
             //   class Animal { public virtual void Speak() { Console.WriteLine(\"Generic sound\"); } }
             //   class Dog : Animal { public override void Speak() { Console.WriteLine(\"Woof\"); } }
             //
-            // → We’ll cover overriding and runtime polymorphism in 14_POLYMORPHISM.cs
+            // -> We'll cover overriding and runtime polymorphism in 14_POLYMORPHISM.cs
             // -------------------------------------------------------------------------------------------------
 
-            Console.WriteLine("3. POLYMORPHISM — Redefining shared methods for unique behaviour.");
+            Console.WriteLine("3. POLYMORPHISM - Redefining shared methods for unique behaviour.");
 
             // -------------------------------------------------------------------------------------------------
-            // 4. ABSTRACTION — "Expose What Matters, Hide What Doesn’t"
+            // 4. ABSTRACTION - "Expose What Matters, Hide What Doesn't"
             // -------------------------------------------------------------------------------------------------
             // - Focus on *what* an object does, not *how* it does it.
             // - Often achieved through abstract classes and interfaces.
@@ -144,13 +144,13 @@ namespace CS_Zero_Hero.oop
             //   abstract class Payment { public abstract void Process(); }
             //   class CardPayment : Payment { public override void Process() {...} }
             //
-            // → We’ll explore abstract classes and interfaces in 15_ABSTRACTION.cs
+            // -> We'll explore abstract classes and interfaces in 15_ABSTRACTION.cs
             // -------------------------------------------------------------------------------------------------
 
-            Console.WriteLine("4. ABSTRACTION — Simplifying complexity by exposing only essentials.");
+            Console.WriteLine("4. ABSTRACTION - Simplifying complexity by exposing only essentials.");
 
             // =================================================================================================
-            // 4️⃣ PROPERTIES AND ACCESS CONTROL
+            // 4. PROPERTIES AND ACCESS CONTROL
             // -------------------------------------------------------------------------------------------------
             // C# uses *properties* to safely access private data.
             // This blends Encapsulation and ease of use:
@@ -168,6 +168,18 @@ namespace CS_Zero_Hero.oop
             //           else _age = value;
             //       }
             //   }
+            //
+            // C# 14 (.NET 10) can skip declaring _age: inside an accessor, `field` is the backing field
+            // the compiler creates for you:
+            //   public int Age
+            //   {
+            //       get;
+            //       set
+            //       {
+            //           if (value < 0) Console.WriteLine("Invalid age");
+            //           else field = value;
+            //       }
+            //   }
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("\n-- Property Demonstration --");
@@ -180,13 +192,13 @@ namespace CS_Zero_Hero.oop
             Console.WriteLine($"Updated Age: {luke.Age}");
 
             // =================================================================================================
-            // 5️⃣ STATIC VS INSTANCE MEMBERS
+            // 5. STATIC VS INSTANCE MEMBERS
             // -------------------------------------------------------------------------------------------------
-            // INSTANCE MEMBERS → belong to individual objects
-            // STATIC MEMBERS → belong to the class itself (shared across all instances)
+            // INSTANCE MEMBERS -> belong to individual objects
+            // STATIC MEMBERS -> belong to the class itself (shared across all instances)
             //
             // Example:
-            //   static int Car.TotalCars → shared counter of all created cars
+            //   static int Car.TotalCars -> shared counter of all created cars
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine($"\nTotal Cars created: {Car.TotalCars}");
@@ -194,13 +206,13 @@ namespace CS_Zero_Hero.oop
             // =================================================================================================
             // SUMMARY
             // -------------------------------------------------------------------------------------------------
-            // ✅ Classes define structure; objects are live instances
-            // ✅ OOP organizes data and behaviour together
-            // ✅ The Four Pillars of OOP:
-            //      1. Encapsulation  → protect data
-            //      2. Inheritance    → reuse structure
-            //      3. Polymorphism   → flexible behaviour
-            //      4. Abstraction    → simplify complexity
+            // - Classes define structure; objects are live instances
+            // - OOP organizes data and behaviour together
+            // - The Four Pillars of OOP:
+            //      1. Encapsulation  -> protect data
+            //      2. Inheritance    -> reuse structure
+            //      3. Polymorphism   -> flexible behaviour
+            //      4. Abstraction    -> simplify complexity
             // -------------------------------------------------------------------------------------------------
 
             Console.WriteLine("\n=== END OF OOP BASICS MODULE ===");

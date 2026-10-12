@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +9,16 @@ namespace CS_zero_hero
     // File: InheritanceDemo.cs
     // ===========================================
     // Focus: C# inheritance with Vehicles & Cars
-    // • virtual, override, sealed
-    // • class‐level access modifiers (public, internal, sealed)
-    // • member access modifiers (private, protected, internal, public)
+    // - virtual, override, sealed
+    // - class-level access modifiers (public, internal, sealed)
+    // - member access modifiers (private, protected, internal, public)
 
     using System;
 
     namespace VehicleInheritanceDemo
     {
         // -------------------------------------------
-        // Class‐level access modifiers:
+        // Class-level access modifiers:
         // -------------------------------------------
         // public   : visible to any code that references this assembly.
         // internal : visible only within this assembly.
@@ -46,7 +46,7 @@ namespace CS_zero_hero
             // private field: not visible to derived classes or other code.
             private readonly string _engineSerial = "ENG-" + Guid.NewGuid();
 
-            // protected property: like a BankAccount’s protected PIN,
+            // protected property: like a BankAccount's protected PIN,
             // visible to derived classes (e.g. Car) but hidden from outside.
             protected string Vin { get; }
 
@@ -73,7 +73,7 @@ namespace CS_zero_hero
                 Console.WriteLine("Vehicle engine stopping (base).");
             }
 
-            // Constructor sets read‐only Vin and initial properties
+            // Constructor sets read-only Vin and initial properties
             public Vehicle(string vin, string model, string manufacturer)
             {
                 Vin = vin;
@@ -132,7 +132,7 @@ namespace CS_zero_hero
         /// <summary>
         /// 3) Sealed class: SportsCar
         ///    - sealed at the class level: no other class can inherit from SportsCar.
-        ///    - Still able to override non‐sealed virtual members.
+        ///    - Still able to override non-sealed virtual members.
         /// </summary>
         public sealed class SportsCar : Car
         {
@@ -183,7 +183,7 @@ namespace CS_zero_hero
                 Car c = new Car("VIN0002", "Sedan", "Acme Motors", 4);
                 c.StartEngine();  // Car.StartEngine override
                 c.StopEngine();   // Car.StopEngine (sealed override)
-                c.ShowEngineSerial(); // can call base’s public method
+                c.ShowEngineSerial(); // can call base's public method
 
                 Console.WriteLine();
 

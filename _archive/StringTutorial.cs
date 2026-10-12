@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,13 +15,13 @@ namespace CS_zero_hero
         {
 
             //In C#, strings are immutable, which means that once a string is created, its content cannot be changed.
-            //Any operation that appears to modify a string—such as ToUpper(), Replace(), or concatenation
-            //(+)—actually creates a new string object in memory. The original string remains unchanged.
+            //Any operation that appears to modify a string - such as ToUpper(), Replace(), or concatenation
+            //(+) - actually creates a new string object in memory. The original string remains unchanged.
             //This design improves security and stability, especially in multi-threaded environments,
             //but it can lead to performance issues when repeatedly modifying strings (e.g., inside loops).
             //In such cases, use StringBuilder, which is designed for efficient, mutable string manipulation.
 
-            //In C#, string interning is a mechanism where identical string literals are stored only once in memory —
+            //In C#, string interning is a mechanism where identical string literals are stored only once in memory -
             //this is managed by the CLR (Common Language Runtime). So, when you declare two identical string literals:
 
 
@@ -146,7 +146,7 @@ namespace CS_zero_hero
             // ----------------------------------------
             public static void ShowStringBuilderAdvantage()
             {
-                // Less efficient way — creates many temporary strings
+                // Less efficient way - creates many temporary strings
                 string result = "";
                 for (int i = 0; i < 5; i++)
                 {
@@ -154,7 +154,7 @@ namespace CS_zero_hero
                 }
                 Console.WriteLine($"Normal string loop: {result}");
 
-                // More efficient — modifies one object in memory
+                // More efficient - modifies one object in memory
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < 5; i++)
                 {
@@ -172,12 +172,12 @@ namespace CS_zero_hero
             // ----------------------------------------
             public static void ExplainStringInterning()
             {
-                // String literals are automatically interned — they share memory
+                // String literals are automatically interned - they share memory
                 string literal1 = "hello";
                 string literal2 = "hello";
                 Console.WriteLine($"Literal1 == Literal2: {object.ReferenceEquals(literal1, literal2)}"); // True
 
-                // Create a new string at runtime — not interned by default
+                // Create a new string at runtime - not interned by default
                 string runtimeString = new string("hello".ToCharArray());
                 Console.WriteLine($"Literal1 == RuntimeString: {object.ReferenceEquals(literal1, runtimeString)}"); // False
 

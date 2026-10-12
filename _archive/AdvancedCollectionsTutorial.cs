@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +40,7 @@ namespace CS_zero_hero
 
             // Because elements are stored as objects,
             // you must cast back to the original type, risking runtime errors.
-            Console.WriteLine("⚠️ Not type-safe. Avoid unless working with legacy APIs.");
+            Console.WriteLine("WARNING: Not type-safe. Avoid unless working with legacy APIs.");
         }
 
         // ----------------------------------------
@@ -99,7 +99,7 @@ namespace CS_zero_hero
                 Console.WriteLine($"Processing: {task}");
             }
 
-            Console.WriteLine("✅ Queue is ideal for task scheduling, print jobs, event handling.");
+            Console.WriteLine("[OK] Queue is ideal for task scheduling, print jobs, event handling.");
         }
 
         // ----------------------------------------
@@ -133,7 +133,7 @@ namespace CS_zero_hero
                 Console.WriteLine($"Apples in stock: {qty}");
             }
 
-            Console.WriteLine("✅ Useful for mappings like userID → userData, word → definition.");
+            Console.WriteLine("[OK] Useful for mappings like userID -> userData, word -> definition.");
         }
 
         // ----------------------------------------
@@ -163,7 +163,7 @@ namespace CS_zero_hero
                 Console.WriteLine($"Step: {step}");
             }
 
-            Console.WriteLine("✅ Great for navigation history, undo/redo stacks, graph structures.");
+            Console.WriteLine("[OK] Great for navigation history, undo/redo stacks, graph structures.");
         }
 
         // ----------------------------------------
@@ -183,7 +183,7 @@ namespace CS_zero_hero
                 "admin@example.com"
             };
 
-            // Attempt to add a duplicate — ignored
+            // Attempt to add a duplicate - ignored
             emails.Add("user@example.com");
 
             // Display contents (order is undefined)
@@ -192,7 +192,7 @@ namespace CS_zero_hero
                 Console.WriteLine($"Email: {email}");
             }
 
-            Console.WriteLine("✅ Great for uniqueness checks, set operations (union, intersect).");
+            Console.WriteLine("[OK] Great for uniqueness checks, set operations (union, intersect).");
         }
 
         // ----------------------------------------
@@ -219,7 +219,7 @@ namespace CS_zero_hero
                 Console.WriteLine($"{entry.Key}: {entry.Value}");
             }
 
-            Console.WriteLine("✅ Useful when sorted order matters and fast lookup is needed.");
+            Console.WriteLine("[OK] Useful when sorted order matters and fast lookup is needed.");
         }
 
         // ----------------------------------------
@@ -246,7 +246,7 @@ namespace CS_zero_hero
                 Console.WriteLine($"ID: {entry.Key} -> Name: {entry.Value}");
             }
 
-            Console.WriteLine("✅ Maintains sorted keys with tree-like performance — similar to TreeMap in Java.");
+            Console.WriteLine("[OK] Maintains sorted keys with tree-like performance - similar to TreeMap in Java.");
         }
 
         // ----------------------------------------

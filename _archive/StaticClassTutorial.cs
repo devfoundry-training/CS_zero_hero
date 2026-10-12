@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,10 +28,10 @@ namespace CS_zero_hero
         // ---------------------------------------
         public StaticClassTutorial(int year)
         {
-            ReadonlyField = year;        // ✅ Allowed
-            ReadonlyProperty = year;     // ✅ Allowed
+            ReadonlyField = year;        // [OK] Allowed
+            ReadonlyProperty = year;     // [OK] Allowed
 
-            // MaxCarAge = 40; // ❌ Error: cannot assign to const
+            // MaxCarAge = 40; // [X] Error: cannot assign to const
         }
 
         // ---------------------------------------
@@ -39,7 +39,7 @@ namespace CS_zero_hero
         // ---------------------------------------
         public void TryModifyReadonlyField()
         {
-            // ReadonlyField = 2025; // ❌ Error: cannot assign to readonly field
+            // ReadonlyField = 2025; // [X] Error: cannot assign to readonly field
         }
 
         // ---------------------------------------
@@ -47,7 +47,7 @@ namespace CS_zero_hero
         // ---------------------------------------
         public void ModifyReadonlyProperty()
         {
-            ReadonlyProperty++; // ✅ Allowed
+            ReadonlyProperty++; // [OK] Allowed
         }
 
         // ---------------------------------------
@@ -57,7 +57,7 @@ namespace CS_zero_hero
         {
             Console.WriteLine($"Const value (MaxCarAge): {MaxCarAge}");
 
-            // MaxCarAge = 35; // ❌ Error: cannot assign to const
+            // MaxCarAge = 35; // [X] Error: cannot assign to const
         }
 
         // ---------------------------------------
@@ -68,7 +68,7 @@ namespace CS_zero_hero
             var car = new StaticClassTutorial(2022);
             Console.WriteLine($"Readonly field: {car.ReadonlyField}");
 
-            // car.ReadonlyField = 2023; // ❌ Error
+            // car.ReadonlyField = 2023; // [X] Error
         }
 
         // ---------------------------------------
@@ -77,10 +77,10 @@ namespace CS_zero_hero
         public static void ShowReadonlyProperty()
         {
             var car = new StaticClassTutorial(2020);
-            car.ModifyReadonlyProperty(); // ✅ Allowed
+            car.ModifyReadonlyProperty(); // [OK] Allowed
             Console.WriteLine($"Readonly property: {car.ReadonlyProperty}");
 
-            // car.ReadonlyProperty = 2021; // ❌ Error
+            // car.ReadonlyProperty = 2021; // [X] Error
         }
     }
 }
