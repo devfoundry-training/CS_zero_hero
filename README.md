@@ -1,5 +1,7 @@
 # C# Zero to Hero
 
+[![Tasks](https://github.com/devfoundry-training/CS_zero_hero/actions/workflows/tasks.yml/badge.svg)](https://github.com/devfoundry-training/CS_zero_hero/actions/workflows/tasks.yml)
+
 A structured teaching repository covering C# 14 and .NET 10 (LTS) from first principles through to OOP, LINQ, and WPF. Each module is a self-contained file with runnable examples and in-code commentary. Part of the Zero to Hero course family.
 
 ---
