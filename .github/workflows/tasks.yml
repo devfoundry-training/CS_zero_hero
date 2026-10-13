@@ -1,0 +1,65 @@
+# Checks the Library Manager tasks on every push: each solution must pass the shared checker
+# (tasks/check/check.py) on Linux and on Windows, and the repository's tests must pass.
+
+# name: the workflow's name on the Actions tab.
+name: Tasks
+
+# on: the events that start the workflow.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+# jobs: the work to do. Each job runs on a fresh machine.
+jobs:
+  check:
+    # strategy.matrix: run the same job once per operating system.
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    # runs-on: the kind of machine GitHub starts for the job.
+    runs-on: ${{ matrix.os }}
+    # defaults.run.shell: bash on both systems, so one script works everywhere.
+    defaults:
+      run:
+        shell: bash
+    # env: settings for every step. These keep dotnet's first-run messages out of the output.
+    env:
+      DOTNET_NOLOGO: "1"
+      DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+    # steps: run in order. "uses" runs a published action, "run" runs shell commands.
+    steps:
+      - name: Check out this repository
+        uses: actions/checkout@v7
+
+      - name: Set up .NET 10
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Set up Python (for the checker)
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Build everything
+        run: dotnet build
+
+      - name: Check every task solution
+        run: |
+          fail=0
+          for dir in tasks/[0-9][0-9]_*/ tasks/B_*/; do
+            name=$(basename "$dir"); id=${name%%_*}; project="tasks/$name/solution"
+            case $id in
+              08|09|10) python tasks/check/check.py "$id" -- dotnet run --project "$project" -- tasks/data ;;
+              11) python tasks/check/check.py 11 -- dotnet test "$project" --logger "console;verbosity=detailed" ;;
+              12) python tasks/check/check.py 12 -- dotnet run --project "$project" -- tasks/data '{port}' &&
+                  python tasks/check/check.py 12_stretch -- dotnet run --project "$project" -- --summarise tasks/data/openlibrary_dune.json ;;
+              *) python tasks/check/check.py "$id" -- dotnet run --project "$project" ;;
+            esac || fail=1
+          done
+          exit $fail
+
+      - name: Run the tests
+        run: dotnet test
